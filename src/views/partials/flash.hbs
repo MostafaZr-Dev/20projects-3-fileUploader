@@ -1,0 +1,23 @@
+<div>
+  {{#with flash}}
+
+    {{#if hasMessage}}
+
+      <div class="bg-green-300 text-green-800 p-5 mb-6 rounded-md">
+        <p>{{message}}</p>
+      </div>
+
+    {{/if}}
+
+    {{#if hasError}}
+
+      <div class="bg-red-300 text-red-800 p-5 mb-6 rounded-md">
+        {{#each errors}}
+          <p>{{this}}</p>
+        {{/each}}
+      </div>
+    {{/if}}
+
+  {{/with}}
+
+</div>
